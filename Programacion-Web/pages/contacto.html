@@ -5,36 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Pedrilos - Contacto</title>
-    <link rel="stylesheet" href="./html/css/style.css" />
-    <link rel="stylesheet" href="./html/css/font.css" />
-    <link rel="stylesheet" href="./html/css/image.css" />
-    <link rel="stylesheet" href="./html/css/form.css" />
+    <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/image.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+    <link rel="stylesheet" href="../css/main_menu.css" />
 </head>
 
 <body>
     <header>
-        <div class="container background-image-contacto" style="z-index: 2;">
-            <div class="text-overlay text-center">
-                <h1>Contacto</h1>
-            </div>
-        </div>
-        <div class="elemen-center">
-            <nav>
-                <ul class="font-menu color-white">
-                    <li><a class="text-menu" href="index.html">Home</a></li>
-                    <li><a class="text-menu" href="tienda.html">Tienda</a></li>
-                    <li><a class="text-menu" href="nosotros.html">Nosotros</a></li>
-                    <li><a class="text-menu" href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="nav-no-main-page">
+            <button class="burger-menu" onclick="toggleMenu()">☰</button>
+            <ul class="menu-items">
+                <li><a class="menu-color-black" href="../index.html">Home</a></li>
+                <li><a class="menu-color-black" href="tienda.html">Tienda</a></li>
+                <li><a class="menu-color-black" href="nosotros.html">Nosotros</a></li>
+                <li><a class="menu-color-black" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <script>
+            function toggleMenu() {
+                const menuItems = document.querySelector('.menu-items');
+                menuItems.classList.toggle('show');
+            }
+        </script>
     </header>
     <main>
+        <div class="container-photo-no-main background-image-contacto paralax">
+            <div class="text-overlay text-center">
+                <h1 class="anima">
+                    Contacto
+                    <span> &#160;</span>
+                </h1>
+            </div>
+        </div>
         <div class="contener-pajina">
-            <div class="contener-contacto-collums">
-                <h2>
+            <div class="contener-contacto-collums" id="foto">
+                <div class="h2-no-animacion">
                     ¡Hola de nuevo!
-                </h2>
+                </div>
                 <div class="font-contacto">
                     ¿Listo para ponerte en contacto con nosotros? ¡Estamos aquí para ayudarte!
                 </div>
@@ -75,8 +85,8 @@
                     contacto y nos pondremos en contacto contigo en breve! ¡Tu opinión es importante para nosotros!
                 </div>
             </div>
-            <div class="contener-contacto-collums">
-                <form action="./gracias.html" method="get">
+            <div class="contener-contacto-collums" id="text">
+                <form action="#modal_2" method="get">
                     <div class="form_padding">
                         <label for="nombre"> Nombre:</label>
                         <input id="nombre" type="text" name="nombre">
@@ -151,6 +161,34 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+        <!-- МОДАЛЬНОЕ ОКНО -->
+        <div id="modal_2">
+            <div class="modal">
+                <div class="modal-context">
+                    <div>
+                        <a href="#" title="Cerrar" class="close">x</a>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="margin: 30px; font-size: 20px; font-weight: bold;">
+                            <div class="modal-content">
+                                ¿Confirmas tus datos?
+                            </div>
+                            <div class="modal-opciones">
+                                <div class="modal-content">
+                                    <img src="../image/si.png" class="icon-size" alt="Иконка еды">
+                                    <a href="gracias.html" class="modal-button">Sí</a>
+                                </div>
+                                <div class="modal-content">
+                                    <img src="../image/no.png" class="icon-size" alt="Иконка доставки">
+                                    <a href="#" class="modal-button">No</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

@@ -5,36 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Pedrilos - Nosotros</title>
-    <link rel="stylesheet" href="./html/css/style.css" />
-    <link rel="stylesheet" href="./html/css/image.css" />
-    <link rel="stylesheet" href="./html/css/font.css" />
+    <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/image.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+    <link rel="stylesheet" href="../css/main_menu.css" />
 
 </head>
 
 <body>
     <header>
-        <div class="elemen-center">
-            <nav>
-                <ul class="font-menu color-white">
-                    <li><a class="text-menu" href="index.html">Home</a></li>
-                    <li><a class="text-menu" href="tienda.html">Tienda</a></li>
-                    <li><a class="text-menu" href="nosotros.html">Nosotros</a></li>
-                    <li><a class="text-menu" href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="nav-no-main-page">
+            <div class="burger-menu" onclick="toggleMenu()">☰</div>
+            <ul class="menu-items">
+                <li><a class="menu-color-black" href="../index.html">Home</a></li>
+                <li><a class="menu-color-black" href="tienda.html">Tienda</a></li>
+                <li><a class="menu-color-black" href="nosotros.html">Nosotros</a></li>
+                <li><a class="menu-color-black" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            function toggleMenu() {
+                const menuItems = document.querySelector('.menu-items');
+                menuItems.classList.toggle('show');
+            }
+        </script>
+
     </header>
     <main>
-        <div class="container background-image-sobre" style="z-index: 2;">
+        <div class="container-photo-no-main background-image-sobre paralax">
             <div class="text-overlay text-center">
-                <h1>Nosotros</h1>
+                <h1 class="anima">
+                    Nosotros
+                    <span> &#160;</span>
+                </h1>
             </div>
         </div>
         <div class="contener-pajina">
             <div class="contener-sobre-collums">
-                <img src="./html/image/LucíaGonzález.jpg" alt="nosotros" class="dueno-image">
+                <img src="../image/LuciaGonzalez.jpg" alt="nosotros" class="dueno-image" id="foto">
             </div>
-            <div class="contener-sobre-collums font-sobre">
+            <div class="contener-sobre-collums font-sobre" id="text">
                 <p>
                     ¡Hola, hambriento amigo!
                 </p>
@@ -67,6 +80,9 @@
                     ¡Buen provecho!
                 </p>
             </div>
+        </div>
+        <div class="contener-pajina" id="text">
+            <iframe width="800" height="400" src="https://www.youtube.com/embed/54eHmcri6b4?si=RLnuBSN9-tuS_Jq6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </main>
     <footer>

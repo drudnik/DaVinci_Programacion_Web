@@ -1,0 +1,111 @@
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.menu-color-white {
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.5s;
+}
+
+.menu-color-black {
+    color: rgb(0, 0, 0, 0.7);
+    transition: 0.5s;
+}
+
+.menu-color-white:hover {
+    color: rgba(255, 255, 255);
+    font-size: 36px;
+}
+
+.menu-color-black:hover {
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+}
+
+/* Адаптивный дизайн для планшетов (максимальная ширина 960px и минимальная ширина 500px) */
+@media (max-width: 960px) and (min-width: 501px) {
+    .menu-items {
+        font-size: 26px;
+        gap: 0px
+    }
+
+    li {
+        padding: 14px;
+    }
+
+    .nav-no-main-page {
+        padding: 15px;
+    }
+
+    .menu-color-white:hover {
+        color: rgba(255, 255, 255);
+        font-size: 30px;
+    }
+
+    .menu-color-black:hover {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+    }
+    
+}
+
+/* Адаптивный дизайн для мобильных устройств (максимальная ширина 500px) */
+@media (max-width: 500px) {
+    .burger-menu {
+        display: block;
+        align-items: center;
+        font-size: 40px;
+    }
+
+    .nav-no-main-page {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+
+    .menu-items.show {
+        display: flex;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .menu-items li a {
+        color: aliceblue;
+        text-decoration: none;
+    }
+    .menu-color-white:hover {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+    }
+
+    .menu-color-black:hover {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+    }
+    .elemen-center{
+        justify-content: left;
+    }
+
+    .no-animation .menu-color-white {
+        animation: none;
+    }
+}

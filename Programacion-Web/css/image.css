@@ -2,23 +2,18 @@
   width: 100%;
   overflow: hidden;
   height: 400px;
-  /* Устанавливаем высоту картинки */
 }
 
 .full-width-img img {
   width: 100%;
-  /* Заполняем контейнер */
   height: auto;
-  /* Подстраиваем высоту под ширину */
   display: block;
   object-fit: cover;
-  /* Обрезаем изображение */
 }
 
-.container {
+.container-photo-main {
   position: relative;
   width: 100%;
-  /* height: 400px; */
   height: 100vh;
   color: white;
   text-align: center;
@@ -26,14 +21,14 @@
   box-sizing: border-box;
 }
 
-.background-image {
-  background-image: url('../image/background2.jpg');
-  background-color: rgba(0, 0, 0, 0.7);
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-position: center;
-  height: calc(100vh - 50px);
-  background-attachment: fixed;
+.container-photo-no-main {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .background-image-index {
@@ -42,7 +37,9 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   z-index: 20;
+  animation-name: start;
 }
 
 .background-image-sobre {
@@ -50,8 +47,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: overlay;
   background-size: cover;
-  background-position: center;
-  z-index: 20;
+  background-position: bottom;
 }
 
 .background-image-tienda {
@@ -60,7 +56,6 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  z-index: 20;
 }
 
 .background-image-gracias {
@@ -69,15 +64,14 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  z-index: 20;
 }
+
 .background-image-platos {
   background-image: url('../image/platos.jpeg');
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  z-index: 20;
 }
 
 .dueno-image {
@@ -91,7 +85,6 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  z-index: 20;
 }
 
 .tienda-image-1 {
@@ -100,8 +93,8 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -110,8 +103,9 @@
 .tienda-image-1:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.25);
-  width: 210px;
-  height: 210px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
 }
 
 .tienda-image-2 {
@@ -120,8 +114,8 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -130,8 +124,8 @@
 .tienda-image-2:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.25);
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
 }
 
 .tienda-image-3 {
@@ -140,8 +134,8 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -150,8 +144,8 @@
 .tienda-image-3:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.25);
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
 }
 
 .tienda-image-4 {
@@ -160,8 +154,8 @@
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -170,17 +164,18 @@
 .tienda-image-4:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.25);
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
 }
+
 .tienda-image-5 {
   background-image: url('../image/5.webp');
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -189,17 +184,18 @@
 .tienda-image-5:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.25);
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
 }
+
 .tienda-image-6 {
   background-image: url('../image/6.webp');
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  width: 300px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -208,17 +204,18 @@
 .tienda-image-6:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.25);
-  width: 310px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
 }
+
 .tienda-image-7 {
   background-image: url('../image/7.webp');
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  width: 300px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -227,17 +224,18 @@
 .tienda-image-7:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.25);
-  width: 310px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
 }
+
 .tienda-image-8 {
   background-image: url('../image/8.webp');
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
-  width: 300px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
@@ -246,27 +244,8 @@
 .tienda-image-8:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
   background-color: rgba(0, 0, 0, 0.25);
-  width: 310px;
-  height: 210px;
-}
-.tienda-image-9 {
-  background-image: url('../image/9.webp');
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-position: center;
-  width: 300px;
+  width: 200px;
   height: 200px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-}
-
-.tienda-image-9:hover {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
-  background-color: rgba(0, 0, 0, 0.25);
-  width: 310px;
-  height: 210px;
 }
 
 .baner {
@@ -277,4 +256,110 @@
   object-position: right center;
   width: 700px;
   height: 100%;
+}
+
+.icon-size {
+  width: 100px;
+  /* height: 210px; */
+}
+
+@media (max-width: 500px) {
+  .tienda-image-1 {
+    width: 400px;
+    height: 200px;
+  }
+
+  .tienda-image-1:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 210px;
+  }
+
+  .tienda-image-2 {
+    width: 400px;
+    height: 200px;
+  }
+
+  .tienda-image-2:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 210px;
+  }
+
+  .tienda-image-3 {
+    width: 400px;
+    height: 200px;
+  }
+
+  .tienda-image-3:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 210px;
+  }
+
+  .tienda-image-4 {
+    width: 400px;
+    height: 200px;
+  }
+
+  .tienda-image-4:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 210px;
+  }
+
+  .tienda-image-5 {
+    width: 400px;
+    height: 200px;
+  }
+
+  .tienda-image-5:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 210px;
+  }
+
+  .tienda-image-6 {
+    width: 400px;
+    height: 200px;
+  }
+
+  .tienda-image-6:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 210px;
+  }
+
+  .tienda-image-7 {
+    width: 400px;
+    height: 200px;
+  }
+
+  .tienda-image-7:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 210px;
+  }
+
+  .tienda-image-8 {
+    width: 400px;
+    height: 200px;
+  }
+
+  .tienda-image-8:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 420px;
+    height: 210px;
+  }
+  .container-photo-no-main {
+    height: 100vh;
+  }
 }

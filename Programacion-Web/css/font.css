@@ -9,6 +9,14 @@ h2 {
     font-size: 30px;
     font-weight: 100;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+.h2-no-animacion {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.75);
 }
 
 h3 {
@@ -16,6 +24,7 @@ h3 {
     font-weight: 100;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 h4 {
@@ -23,6 +32,7 @@ h4 {
     font-weight: 100;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .font-big-size {
@@ -50,19 +60,11 @@ h4 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.font-menu {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-transform: uppercase;
-    color: aliceblue;
-    font-size: 30px;
-}
-
 .text-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
 }
 
 .text-tienda {
@@ -74,7 +76,6 @@ h4 {
     font-weight: 100;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
-    
 }
 
 .text-left {
@@ -85,13 +86,67 @@ h4 {
 }
 
 .text-center {
-    color: aliceblue;
-    text-align: center;
-    display: table-cell;
-    vertical-align: bottom;
+    width: 80%;
 }
 
 .elemen-center {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 960px) and (min-width: 501px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    h3 {
+        font-size: 35px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    h4 {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+    .modal-content{
+        margin: 15px;
+    }
+    .modal-button{
+        font-size: 14px;
+    }
+   
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    h3 {
+        font-size: 35px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+    .modal-content{
+        margin: 20px;
+    }
+
+    .modal-button{
+        font-size: 14px;
+    }
+    .modal-opciones{
+        flex-direction:column;
+    }
+    .close{
+        padding: 10px;
+    }
 }
