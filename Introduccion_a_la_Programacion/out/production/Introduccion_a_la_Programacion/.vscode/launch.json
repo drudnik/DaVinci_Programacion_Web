@@ -1,0 +1,59 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "la_tarea_01_2024",
+            "request": "launch",
+            "mainClass": "la_tarea_01_2024",
+            "projectName": "Introduccion_a_la_Programacion_78df1d6f"
+        },
+        {
+            "type": "java",
+            "name": "fechaLit",
+            "request": "launch",
+            "mainClass": "fechaLit",
+            "projectName": "Introduccion_a_la_Programacion_78df1d6f"
+        },
+        {
+            "type": "java",
+            "name": "arraysIntro",
+            "request": "launch",
+            "mainClass": "arraysIntro",
+            "projectName": "Introduccion_a_la_Programacion_78df1d6f"
+        },
+        {
+            "type": "java",
+            "name": "la_tarea_3_2024_05_18",
+            "request": "launch",
+            "mainClass": "la_tarea_3_2024_05_18",
+            "projectName": "Introduccion_a_la_Programacion_78df1d6f"
+        },
+        {
+            "type": "java",
+            "name": "la_tarea_2_2024_05_18",
+            "request": "launch",
+            "mainClass": "la_tarea_2_2024_05_18",
+            "projectName": "Introduccion_a_la_Programacion_78df1d6f"
+        },
+        {
+            "type": "java",
+            "name": "la_tarea_2024_05_18",
+            "request": "launch",
+            "mainClass": "la_tarea_2024_05_18",
+            "projectName": "Introduccion_a_la_Programacion_78df1d6f"
+        },
+        {
+            "type": "java",
+            "name": "Запускаем это говно",
+            "request": "launch",
+            "mainClass": "./${file}"
+        },
+        {
+            "type": "java",
+            "name": "la_tarea_1_2024_06_08.java",
+            "request": "launch",
+            "mainClass": "Mitarea.java"
+        }
+    ]
+}

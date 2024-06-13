@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+section article{
+    flex: 50%;
+}
+section figure img{
+    width: 100%;
+}
+
+#logo{
+    height: 120px;
+    background-image: url("../imgs/International_Pokémon_logo.png");
+    background-repeat: no-repeat;
+}
+#logo h1{
+    visibility: hidden;
+}
+main section article figure img{
+    width: 250px;
+}
+#banner img{
+    padding: 50px;
+
+}
+article div a{
+    display: block;
+    text-align: center;
+    height: 30px;
+    padding-top: 10px;
+    text-decoration: none;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    width: 250px;
+}
+article div a:hover{
+    background-color: black;
+    color: yellow;
+}
+label{
+    display: block;
+    visibility: hidden;
+}
+input, textarea{
+    width: 100%;
+    height: 40px;
+    font-size: 16pt;
+}
+textarea{
+    height: 80px;
+}
+input[type=submit]{
+    background-color: yellow;
+    color: black;
+}
+footer{
+    background-color: gray;
+    color: aliceblue;
+    text-align: center;
+    height: 200px;
+
+
+}    
+footer p{
+    padding-top: 50px ;
+}
+
+/********************************************************************************/
+
+
+
+/*                            VENTANA MODAL                                     */
+
+
+
+/********************************************************************************/
+
+#verde{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+#verde:target{
+    display: block;
+
+}
+.modal, .contenido{
+    margin: auto;
+    width: 80%;
+    margin-top: 150px;
+    text-align: justify;
+
+}
+.contenido header{
+    background-color: yellow;
+}
+.contenido main{
+
+    background-color: aliceblue;
+}
+.contenido main section article{
+    padding: 50px;
+}
+.contenido main section{
+    margin-bottom: 0px;
+}
+.contenido footer{
+    height: 50px;
+}
+.contenido footer div a{
+    display: block;
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+    height: 50px;
+    padding-top: 20px;
+    font-size: 20pt;
+}
+.contenido footer div a:hover{
+    background-color: black;
+    color: yellow;
+}
+.contenido header a{
+    float: right;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.contenido header a:hover{
+    background-color: black;
+    color: yellow;
+
+}

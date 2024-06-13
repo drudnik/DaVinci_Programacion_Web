@@ -1,0 +1,75 @@
+header,main,footer{
+    width: 80%;
+    margin: auto;
+}
+section{
+    display: flex;
+    flex-direction:row ;
+}
+article{
+    flex: 50% ;
+    padding: 3%;
+}
+img{
+    width: 250px;
+    padding-top: 20px ;
+}
+figure{
+    background-color: brown;
+    text-align: center;
+    height: 100px;
+}
+footer{
+    margin-top: 200px;
+}
+p, figcaption{
+    text-align: justify;
+}
+
+iframe{
+    animation-name: video;
+    animation-duration: 4s;
+}
+
+@keyframes video {
+    from{
+        margin-left: -1000px;
+
+    }
+    to{
+        margin-left: 0px;
+    }
+    
+}
+#texto{
+    animation-name: texto;
+    animation-duration: 4s;
+}
+
+@keyframes texto {
+    from{
+        padding-top: 200px ;
+    }
+    to{
+        padding-top: 0px;
+    }
+    
+}
+figure{
+    animation-name: fotos;
+    animation-duration: 8s;
+}
+@keyframes fotos {
+    0%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+        opacity: 0.1;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}

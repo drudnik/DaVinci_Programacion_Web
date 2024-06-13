@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Pedrilos - Contacto</title>
+    <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/image.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+    <link rel="stylesheet" href="../css/main_menu.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="nav-no-main-page">
+            <button class="burger-menu" onclick="toggleMenu()">☰</button>
+            <ul class="menu-items">
+                <li><a class="menu-color-black" href="../index.html">Home</a></li>
+                <li><a class="menu-color-black" href="tienda.html">Tienda</a></li>
+                <li><a class="menu-color-black" href="nosotros.html">Nosotros</a></li>
+                <li><a class="menu-color-black" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <script>
+            function toggleMenu() {
+                const menuItems = document.querySelector('.menu-items');
+                menuItems.classList.toggle('show');
+            }
+        </script>
+    </header>
+    <main>
+        <div class="container-photo-no-main background-image-contacto paralax">
+            <div class="text-overlay text-center">
+                <h1 class="anima">
+                    Contacto
+                    <span> &#160;</span>
+                </h1>
+            </div>
+        </div>
+        <div class="contener-pajina">
+            <div class="contener-contacto-collums" id="foto">
+                <div class="h2-no-animacion">
+                    ¡Hola de nuevo!
+                </div>
+                <div class="font-contacto">
+                    ¿Listo para ponerte en contacto con nosotros? ¡Estamos aquí para ayudarte!
+                </div>
+                <div class="font-contacto">
+                    <div class="font-contacto-title">
+                        Dirección:
+                    </div>
+                    <div>
+                        Calle Principal, número 123
+                        Ciudad, País
+                    </div>
+                </div>
+                <div class="font-contacto">
+                    <div class="font-contacto-title">
+                        Teléfono:
+                    </div>
+                    <div>
+                        (+XX) XXX-XXX-XXXX
+                    </div>
+                </div>
+                <div class="font-contacto">
+                    <div class="font-contacto-title">
+                        Correo Electrónico:
+                    </div>
+                    <div>
+                        info@nombredeempresa.com
+                    </div>
+                </div>
+                <div class="font-contacto">
+                    ¡No dudes en llamarnos, enviarnos un correo electrónico o visitarnos en persona! Estamos
+                    ansiosos
+                    por
+                    escucharte y atender todas tus preguntas, sugerencias o comentarios. ¡Gracias por elegirnos!
+                </div>
+                <div class="font-contacto">
+                    ¿Quieres compartir tus opiniones, hacer preguntas o simplemente saludar? ¡Completa el formulario
+                    de
+                    contacto y nos pondremos en contacto contigo en breve! ¡Tu opinión es importante para nosotros!
+                </div>
+            </div>
+            <div class="contener-contacto-collums" id="text">
+                <form action="#modal_2" method="get">
+                    <div class="form_padding">
+                        <label for="nombre"> Nombre:</label>
+                        <input id="nombre" type="text" name="nombre">
+                    </div>
+                    <div class="form_padding">
+                        <label for="num">Numeros telefono:</label>
+                        <input id="num" type="text" name="numeros" 
+                            placeholder="+XX XXX XX XXX">
+                    </div>
+                    <div class="form_padding">
+                        <label for="mail">E-mail</label>
+                        <input id="mail" type="mail" name="mail">
+                    </div>
+                    <div class="form_padding">
+                        <label for="texto">Messaje</label>
+                        <textarea if="texto" name="texto" rows="7">
+                                Contenido...
+                        </textarea>
+                    </div>
+                    <fieldset>
+                        <legend>¿Cuál es tu pregunta?</legend>
+                        <div>
+                            <input id="pregunta_1" name="pregunta_1" value="Contacto pregunta 1" type="checkbox">
+                            <label for="pregunta_1">
+                                Pregunta 1
+                            </label>
+                        </div>
+                        <div>
+                            <input id="pregunta_2" name="pregunta_2" value="Contacto pregunta 2" type="checkbox">
+                            <label for="pregunta_2">
+                                Pregunta 2
+                            </label>
+                        </div>
+                        <div>
+                            <input id="pregunta_3" name="pregunta_3" value="Contacto pregunta 2" type="checkbox">
+                            <label for="pregunta_3">
+                                Pregunta 3
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>¿Tiene una pregunta urgente?</legend>
+                        <div>
+                            <input id="si" type="radio" name="contacto_pregunta_urgente" value="si">
+                            <label for="si">Si</label>
+                        </div>
+                        <div>
+                            <input id="no" type="radio" name="contacto_pregunta_urgente" value="no">
+                            <label for="no">No</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend for="pais">
+                            Elige tu país
+                        </legend>
+                        <div>
+                            <select id="pais" name="pais">
+                                <option value="Argentina">Argentina</option>
+                                <option value="Rusia">Rusia</option>
+                                <option value="Espania">Espania</option>
+                                <option value="Bababaland">Bababaland</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <div class="form_padding">
+                        <div>
+                            <label for="fecha">Fecha de entrega</label>
+                            <input for="fecha" type="date" name="fecha"></label>
+                        </div>
+                        <div class="buttom-submit">
+                            <input type="submit" value="SUBMIT"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- МОДАЛЬНОЕ ОКНО -->
+        <div id="modal_2">
+            <div class="modal">
+                <div class="modal-context">
+                    <div>
+                        <a href="#" title="Cerrar" class="close">x</a>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="margin: 30px; font-size: 20px; font-weight: bold;">
+                            <div class="modal-content">
+                                ¿Confirmas tus datos?
+                            </div>
+                            <div class="modal-opciones">
+                                <div class="modal-content">
+                                    <img src="../image/si.png" class="icon-size" alt="Иконка еды">
+                                    <a href="gracias.html" class="modal-button">Sí</a>
+                                </div>
+                                <div class="modal-content">
+                                    <img src="../image/no.png" class="icon-size" alt="Иконка доставки">
+                                    <a href="#" class="modal-button">No</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="font-contacto">
+                debería haber estado footer aquí, pero no lo hice
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
