@@ -377,7 +377,7 @@ li {
     display: block;
 }
 
-#modal_2 {
+#modal_contacto {
     z-index: 1000;
     position: fixed;
     top: 0;
@@ -389,7 +389,7 @@ li {
     display: none;
 }
 
-#modal_2:target {
+#modal_contacto:target {
     display: block;
 }
 
