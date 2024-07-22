@@ -51,36 +51,25 @@
         align-items: center;
         font-size: 40px;
     }
-
     .nav-no-main-page {
         position: absolute;
         flex-direction: column;
         align-items: center;
     }
-
     .menu-items {
         display: none;
         flex-direction: row;
     }
-
     .menu-items.show {
         display: flex;
     }
-
-
     li {
         padding: 10px;
     }
-
     .menu-items li a {
         color: aliceblue;
         text-decoration: none;
     }
-    .menu-color-white:hover {
-        color: rgb(255, 255, 255);
-        font-size: 24px;
-    }
-
     .menu-color-black:hover {
         color: rgb(255, 255, 255);
         font-size: 24px;
@@ -88,7 +77,6 @@
     .elemen-center{
         justify-content: left;
     }
-
     .no-animation .menu-color-white {
         animation: none;
     }
