@@ -12,19 +12,10 @@
     transition: 0.5s;
 }
 
-.menu-color-black {
-    color: rgb(0, 0, 0, 0.7);
-    transition: 0.5s;
-}
-
 .menu-color-white:hover {
     color: rgba(255, 255, 255);
-    font-size: 36px;
-}
-
-.menu-color-black:hover {
-    color: rgb(0, 0, 0);
-    font-size: 36px;
+    font-size: 34px;
+    transition: 0.5s;
 }
 
 /* Адаптивный дизайн для планшетов (максимальная ширина 960px и минимальная ширина 500px) */
@@ -50,8 +41,7 @@
     .menu-color-black:hover {
         color: rgb(0, 0, 0);
         font-size: 30px;
-    }
-    
+    } 
 }
 
 /* Адаптивный дизайн для мобильных устройств (максимальная ширина 500px) */
