@@ -3,13 +3,13 @@
 $connect;
 
 try {
-    $connect = new PDO('mysql:host=localhost;dbname=act2ap', 'root', '');
+    $connect = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
 }
 catch(PDOException $e) {
     echo 'DB connection error';
 }
 
-$bdSelect = $context ->query('SELECT id, title, img_url From products');
+$bdSelect = $connect ->query('SELECT id, title, img_url From products');
 $products = $bdSelect->fetchAll();
 
 // foreach ($products as $item) {
@@ -22,7 +22,7 @@ function getProductCard($product){
         <a href='#staticBackdrop' class='link-underline link-underline-opacity-0'>
             <div class='tienda-image-1 text-tienda' data-bs-toggle='modal'
                 data-bs-target='#staticBackdrop' 
-                style='background-image:" . "url('" . "{$product['img_url']}" . "');.". "' >
+                style='background-image: url( \"{$product['img_url']} \");' >
                 {$product['title']}
             </div>
         </a>
@@ -97,7 +97,17 @@ function getProductCard($product){
         <div class="align-central">
             <div class="catalog">
                 <div class="catalog-line" >
-                    <div class="catalog-element">
+
+                    <?php
+                    
+                        for ($i = 0; $i < 8; $i++){
+                            echo getProductCard($products[$i]);
+
+                        }
+
+                    ?>
+
+                    <!-- <div class="catalog-element">
                         <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
                             <div class="tienda-image-1 text-tienda" data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop" >
@@ -160,7 +170,7 @@ function getProductCard($product){
                                 el plato 8
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
