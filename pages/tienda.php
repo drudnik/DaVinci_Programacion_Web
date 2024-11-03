@@ -1,3 +1,36 @@
+<?php
+
+$connect;
+
+try {
+    $connect = new PDO('mysql:host=localhost;dbname=act2ap', 'root', '');
+}
+catch(PDOException $e) {
+    echo 'DB connection error';
+}
+
+$bdSelect = $context ->query('SELECT id, title, img_url From products');
+$products = $bdSelect->fetchAll();
+
+// foreach ($products as $item) {
+//     echo "item {$item['username']}";
+// }
+
+function getProductCard($product){
+    return
+    "<div class='catalog-element'>
+        <a href='#staticBackdrop' class='link-underline link-underline-opacity-0'>
+            <div class='tienda-image-1 text-tienda' data-bs-toggle='modal'
+                data-bs-target='#staticBackdrop' 
+                style='background-image:" . "url('" . "{$product['img_url']}" . "');.". "' >
+                {$product['title']}
+            </div>
+        </a>
+    </div>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
