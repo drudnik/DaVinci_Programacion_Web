@@ -44,40 +44,10 @@ function getProductCard($product){
 </head>
 
 <body>
-    <header>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
 
-        <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-black" aria-label="Eleventh navbar example">
-            <div class="container-fluid menu-items ">
-                <a class="navbar-brand" href="../index.html" style="margin-right: 0px;">
-                    <img class="logo  menu-color-white" src="../image/favicon.ico" style="width: 30px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item">
-                            <a class="nav-link menu-color-white" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-color-white" aria-current="page" href="./tienda.html">Tienda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-color-white" aria-current="page" href="./nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link menu-color-white" aria-current="page" href="./contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- ГЛАВНОЕ МЕНЮ -->
+    <?php include '../src/menu_secondary.php'; ?>
+    
     <main>
 
         <div class="container-photo-no-main background-image-tienda paralax">
@@ -91,17 +61,33 @@ function getProductCard($product){
         <div class="align-central">
             <div class="catalog">
                 <div class="catalog-line" >
-
                     <?php
-                    
-                        for ($i = 0; $i < count($products); $i++){
-                            echo getProductCard($products[$i]);
-
-                        }
-
+                    // Определяем количество продуктов на одной странице
+                    $productsPerPage = 10;
+                    // Считаем общее количество страниц
+                    $totalProducts = count($products);
+                    $totalPages = ceil($totalProducts / $productsPerPage);
+                    // Получаем текущую страницу из параметра "page" в URL, если он не задан, устанавливаем 1
+                    $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+                    // Убедимся, что текущая страница находится в допустимых пределах
+                    $currentPage = max(1, min($totalPages, $currentPage));
+                    // Рассчитываем начальный индекс для продуктов на текущей странице
+                    $startIndex = ($currentPage - 1) * $productsPerPage;
+                    // Получаем нужный подмассив продуктов для текущей страницы
+                    $productsToShow = array_slice($products, $startIndex, $productsPerPage);
+                    // Выводим продукты для текущей страницы
+                    for ($i = 0; $i < count($productsToShow); $i++) {
+                        echo getProductCard($productsToShow[$i]);
+                    }
                     ?>
-
                 </div>
+                <div>
+                    <?php
+                        // Подключаем пагинацию
+                        include '../src/pagination.php';
+                    ?>
+                </div>
+
             </div>
         </div>
         <!-- МОДАЛЬНОЕ ОКНО -->
@@ -135,7 +121,7 @@ function getProductCard($product){
                                     <div class="center">
                                         <img src="../image/icon-delivery.png" class="icon-size" alt="Иконка доставки">
                                     </div>
-                                    <a href="./platos.html" style="text-decoration: none">
+                                    <a href="./platos.php" style="text-decoration: none">
                                         <div class="center">
                                             <button type="button" class="btn btn-outline-success">
                                                 Añadir al carrito
@@ -152,13 +138,10 @@ function getProductCard($product){
 
 
     </main>
-    <footer>
-        <div class="footer">
-            <div class="font-contacto">
-                debería haber estado footer aquí, pero no lo hice
-            </div>
-        </div>
-    </footer>
+      
+  <!-- ФУТЕР -->
+  <?php include '../src/footer.php'; ?>
+  
 </body>
 
 </html>

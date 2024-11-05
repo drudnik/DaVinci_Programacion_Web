@@ -1,22 +1,21 @@
 <!-- error.php -->
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ошибка подключения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error de conexión</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/error_page.css" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f8d7da; color: #721c24; text-align: center; padding: 50px; }
-        .error-container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #f5c6cb; background-color: #f8d7da; border-radius: 5px; }
-        h1 { font-size: 24px; }
-        p { font-size: 18px; }
-        a { color: #721c24; text-decoration: none; }
+        
     </style>
 </head>
 <body>
     <div class="error-container">
-        <h1>Ошибка подключения к базе данных</h1>
-        <p>Произошла ошибка при подключении к базе данных. Пожалуйста, попробуйте снова позже.</p>
-        <p><a href="../index.html">Вернуться на главную</a></p>
+        <h1 class="error-title">Error de conexión a la base de datos</h1>
+        <p class="error-message">Ocurrió un error al intentar conectar a la base de datos. Por favor, intentá nuevamente más tarde.</p>
+        <a href="../index.php" class="back-button">Volver a la página principal</a>
     </div>
 </body>
 </html>

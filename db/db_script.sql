@@ -40,16 +40,25 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `mydb`;
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (1, 'EL PLATO 1', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/1.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (2, 'EL PLATO 2', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/2.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (3, 'EL PLATO 3', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/3.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (4, 'EL PLATO 4', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/4.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (5, 'EL PLATO 5', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/5.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (6, 'EL PLATO 6', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/6.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (7, 'EL PLATO 7', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/7.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (8, 'EL PLATO 8', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/8.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (9, 'EL PLATO 9', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/8.webp');
--- INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 10', 'https://raw.githubusercontent.com/NullBrainReference/DaVinci_Programacion_Web/refs/heads/main/image/8.webp');
+
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (1, 'EL PLATO 1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/1.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (2, 'EL PLATO 2', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/2.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (3, 'EL PLATO 3', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/3.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (4, 'EL PLATO 4', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/4.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (5, 'EL PLATO 5', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/5.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (6, 'EL PLATO 6', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/6.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (7, 'EL PLATO 7', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/7.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (8, 'EL PLATO 8', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/8.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (9, 'EL PLATO 9', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/9.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 10_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/1.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 11_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/2.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 12_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/3.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 13_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/4.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 14_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/5.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 15_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/6.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 16_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/7.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 17_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/8.webp');
+INSERT INTO `mydb`.`products` (`id`, `title`, `img_url`) VALUES (10, 'EL PLATO 18_1', 'https://raw.githubusercontent.com/drudnik/DaVinci_Programacion_Web/refs/heads/main/image/9.webp');
 
 COMMIT;
 
