@@ -24,8 +24,9 @@ function connectionDB() {
 
         return $connect;
     } catch (Exception $e) {
-        // Выводим сообщение об ошибке и завершаем выполнение
-        die('Ошибка: ' . $e->getMessage());
+        //При возникновении ошибки выполняется переход на страницу error.php
+        header("Location: ../pages/error.php");
+        exit();
     }
 }
 ?>
