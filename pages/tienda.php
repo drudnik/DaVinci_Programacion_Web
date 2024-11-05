@@ -1,3 +1,31 @@
+<?php
+require '../db/connectionDB.php';
+$connect = connectionDB();
+
+try {
+    // Выполняем запрос
+    $bdSelect = $connect->query('SELECT id, title, img_url FROM products');
+    $products = $bdSelect->fetch_all(MYSQLI_ASSOC);
+    
+} catch (Exception $e) {
+    echo 'Ошибка при выполнении запроса: ' . $e->getMessage();
+}
+
+function getProductCard($product){
+    return
+    "<div class='catalog-element'>
+        <a href='#staticBackdrop' class='link-underline link-underline-opacity-0'>
+            <div class='tienda-image-1 text-tienda' data-bs-toggle='modal'
+                data-bs-target='#staticBackdrop' 
+                style='background-image: url( \"{$product['img_url']} \");' >
+                {$product['title']}
+            </div>
+        </a>
+    </div>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +59,6 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
@@ -64,70 +91,16 @@
         <div class="align-central">
             <div class="catalog">
                 <div class="catalog-line" >
-                    <div class="catalog-element">
-                        <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
-                            <div class="tienda-image-1 text-tienda" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop" >
-                                el plato 1
-                            </div>
-                        </a>
-                    </div>
-                    <div class="catalog-element">
-                        <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
-                            <div class="tienda-image-2 text-tienda" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                el plato 2
-                            </div>
-                        </a>
-                    </div>
-                    <div class="catalog-element">
-                        <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
-                            <div class="tienda-image-3 text-tienda" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                el plato 3
-                            </div>
-                        </a>
-                    </div>
-                    <div class="catalog-element">
-                        <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
-                            <div class="tienda-image-4 text-tienda" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                el plato 4
-                            </div>
-                        </a>
-                    </div>
-                    <div class="catalog-element">
-                        <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
-                            <div class="tienda-image-5 text-tienda" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                el plato 5
-                            </div>
-                        </a>
-                    </div>
-                    <div class="catalog-element">
-                        <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
-                            <div class="tienda-image-6 text-tienda" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                el plato 6
-                            </div>
-                        </a>
-                    </div>
-                    <div class="catalog-element">
-                        <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
-                            <div class="tienda-image-7 text-tienda" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                el plato 7
-                            </div>
-                        </a>
-                    </div>
-                    <div class="catalog-element">
-                        <a href="#staticBackdrop" class="link-underline link-underline-opacity-0">
-                            <div class="tienda-image-8 text-tienda" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
-                                el plato 8
-                            </div>
-                        </a>
-                    </div>
+
+                    <?php
+                    
+                        for ($i = 0; $i < count($products); $i++){
+                            echo getProductCard($products[$i]);
+
+                        }
+
+                    ?>
+
                 </div>
             </div>
         </div>
