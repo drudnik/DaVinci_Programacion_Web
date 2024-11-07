@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="contener-contacto-collums" id="text">
-                <form action="#modal_contacto" method="get">
+                <form action="#modal_contacto" method="post">
                     <div class="form_padding">
                         <label for="nombre"> Nombre:</label>
                         <input id="nombre" type="text" name="nombre">
