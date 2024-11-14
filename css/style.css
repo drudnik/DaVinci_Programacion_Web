@@ -467,3 +467,7 @@ li {
     color: black;
     text-decoration: none;
 }
+
+span.required {
+    color: red;
+}
