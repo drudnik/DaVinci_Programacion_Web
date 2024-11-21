@@ -44,7 +44,7 @@ textarea {
 input[type=text],
 input[type=number],
 input[type=date],
-input[type=mail],
+input[type=email],
 select {
     display: flex;
     width: 75%;

@@ -471,3 +471,19 @@ li {
 span.required {
     color: red;
 }
+
+.error-messages {
+    color: red;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.error-messages ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.error-messages li {
+    margin-bottom: 5px;
+}
